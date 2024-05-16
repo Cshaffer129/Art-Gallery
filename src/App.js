@@ -10,16 +10,16 @@ const ART_PIECES = [
     imgPath: '/Starry.jpeg',
   },
   {
-    title: 'Stillness',
-    imgPath: '/crane.jpeg',
+    title: 'The Scream',
+    imgPath: '/Scream.jpeg',
   },
   {
-    title: 'Foxy',
-    imgPath: '/foxy.jpeg',
+    title: 'American Gothic',
+    imgPath: '/America.jpeg',
   },
   {
-    title: 'Gentle Giant',
-    imgPath: '/horse_sketch.jpeg',
+    title: 'Whistlers Mother',
+    imgPath: '/Mother.jpeg',
   },
   {
     title: 'Purity',
