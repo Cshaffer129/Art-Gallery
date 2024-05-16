@@ -22,12 +22,12 @@ const ART_PIECES = [
     imgPath: '/Mother.jpeg',
   },
   {
-    title: 'Purity',
-    imgPath: '/kindness.jpeg',
+    title: 'White House at night ',
+    imgPath: '/House.jpeg',
   },
   {
-    title: 'Lonely Together',
-    imgPath: '/lonely_together.jpeg',
+    title: 'The Last Supper',
+    imgPath: '/Supper.jpeg',
   },
   {
     title: 'Owl',
