@@ -6,20 +6,20 @@ import { TextureLoader, Vector3 } from 'three'
 
 const ART_PIECES = [
   {
-    title: 'Starry Nights',
-    imgPath: '/Starry.jpeg',
+    title: 'Beautiful Beast',
+    imgPath: '/beauty_and_beast.jpeg',
   },
   {
-    title: 'The Scream',
-    imgPath: '/Scream.jpeg',
+    title: 'Stillness',
+    imgPath: '/crane.jpeg',
   },
   {
-    title: 'American Gothic',
-    imgPath: '/America.jpeg',
+    title: 'Foxy',
+    imgPath: '/foxy.jpeg',
   },
   {
-    title: 'Whistlers Mother',
-    imgPath: '/Mother.jpeg',
+    title: 'Gentle Giant',
+    imgPath: '/horse_sketch.jpeg',
   },
   {
     title: 'Purity',
@@ -60,7 +60,8 @@ const WallArt = (props) => {
   const { width: w, height: h } = useThree((state) => state.viewport);
   const gap = 4;
   const imageWidth = 3;
-  const texture = useLoader(TextureLoader, art.imgPath)
+  const texture = useLoader(TextureLoader, art.imgPath);
+
 
   return (
     <>
@@ -111,11 +112,8 @@ const Scene = () => {
   const textScale = screenWidth < 5.5 ? 2 : 4
 
   return (
-    <Suspense fallback={
-      <Html style={{ fontSize: '6vw', whiteSpace: 'nowrap', color: 'white' }} center>
-        Loading 3D Art Gallery...
-      </Html>
-    }>
+   
+    
       <ScrollControls infinite horizontal damping={4} pages={39*Math.exp(-0.11 * screenWidth) } distance={1}>
         <Scroll>
           <Text
@@ -127,8 +125,7 @@ const Scene = () => {
             font="https://fonts.gstatic.com/s/sacramento/v5/buEzpo6gcdjy0EiZMBUG4C0f-w.woff"
             castShadow
           >
-            Creativity is allowing yourself to make mistakes.
-          </Text>
+"Art is a form of love          </Text>
           <Text
             position-z={1}
             anchorX="center"
@@ -139,8 +136,7 @@ const Scene = () => {
             font="https://fonts.gstatic.com/s/sacramento/v5/buEzpo6gcdjy0EiZMBUG4C0f-w.woff"
             castShadow
           >
-            Art is knowing which ones to keep.
-          </Text>
+Art is a gift. Art heals life."           </Text>
           <Text
             position={[0, -0.5, 1.5]}
             anchorX="center"
@@ -148,7 +144,7 @@ const Scene = () => {
             font="https://fonts.gstatic.com/s/sacramento/v5/buEzpo6gcdjy0EiZMBUG4C0f-w.woff"
           // castShadow
           >
-            ~ Scott Adams
+            ~ Robert Gunn
           </Text>
 
           {ART_PIECES.map((art, i) => {
@@ -161,7 +157,6 @@ const Scene = () => {
           }
         </Scroll>
       </ScrollControls>
-    </Suspense >
   )
 }
 
